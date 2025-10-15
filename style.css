@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* 全体スクロールを無効にし、左右分割の中でスクロール */
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* 全画面 */
+}
+
+.left, .right {
+  width: 50%;
+  height: 100vh;
+  overflow-y: auto;       /* 各列ごとにスクロール */
+  background-color: #000; /* 背景色は好みで */
+}
+
+.left img,
+.right img {
+  width: 100%;     /* 表示エリア（50%幅）で全幅 */
+  height: auto;    /* 縦横比保持 */
+  display: block;  /* 余白をなくす */
+}
